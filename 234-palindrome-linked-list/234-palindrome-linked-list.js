@@ -10,23 +10,16 @@
  * @return {boolean}
  */
 var isPalindrome = function(head) {
-    let first=head
-    let last=head;
-    while(last.next){
-        temp=last;
-        last=last.next;
-        last.pre=temp;
-    }
-    
-    while(last.val==first.val){
-        console.log(last.val)
-        if(last==first)
+    let first=head;
+    function isPalind(node){
+        if(!node)
             return true
-        last=last.pre
-        if(last==first)
-            return true
+        let ret=isPalind(node.next)
+        if(!ret) return ret
+        if(first.val!=node.val)
+            return false;
         first=first.next;
+        return true;
     }
-    
-    return false
+    return isPalind(head)
 };
