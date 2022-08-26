@@ -8,7 +8,6 @@ var isValid = function(s) {
 for (let i=0;i<s.length;i++){
     let ele=s.charAt(i);
     if(pair[ele]){
-    console.log(i)
         if(store.length<1)
             return false;
         if(store[store.length-1]!=pair[ele])
