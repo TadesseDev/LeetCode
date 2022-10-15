@@ -10,7 +10,6 @@ def length_of_longest_substring(s)
             new_str.insert(-1,s[end_ele])
             end_ele+=1
         end
-        puts start
         result = new_str if new_str.length > result.length
         i=end_ele
         start=s.index(s[end_ele], start)+1 if s[end_ele]
