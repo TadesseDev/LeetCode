@@ -8,7 +8,7 @@ def letter_combinations(digits)
     result=[]
     chars=@hash[digits[digits.length-1].to_sym]
     ret.each do |char|
-        result.push(*[char+chars[0],char+chars[1],char+chars[2]].sort) 
+        result.push(char+chars[0],char+chars[1],char+chars[2]) 
         result.push(char+chars[3]) if chars.length>3
     end
     return result
