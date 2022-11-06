@@ -1,41 +1,26 @@
-# APP title
+# My LeetCode chalenges
 
-> APP description...
+> I love solving problems, I have 5 star (almost 6 now) for my problem solving skill on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1), This was a while a go. Now I have solved most of the chalenges on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1) I am trying to fix as much problems as possible on LeetCode. 
 
-## Built With
+## Langueges
+I'll mostly soolve problems with `JavaScript` and `Ruby`
 
-- Technologies
 
-## Screenshots
+## If you like to use my solutions,
 
-### Mobile
-
-mobile views 
-
-### Desktop
-
-Desktop Views
-
-## Live Demo
-
-[Go Live](#) 😎
-
-## Getting Started
-
-1. Open [dev branch](https://github.com/Tadesse-Alemayehu/repo_location)
+1. Open [dev branch](https://github.com/Tadesse-Alemayehu/LeetCode)
 2. Open VSCode or terminal and navigate to the folder where you would like to clone the project.
 3. Type "pwd" to see your working directory.
-4. [clone repository](https://github.com/Tadesse-Alemayehu/repo_location)
+4. [clone repository](https://github.com/Tadesse-Alemayehu/LeetCode)
 
 ```bash
-$ git clone https://github.com/Tadesse-Alemayehu/repo_location
+$ git clone https://github.com/Tadesse-Alemayehu/LeetCode
 ```
 
 5. Run
 
-```bash
-  $ npm install # to install required packages
-  $ npm run start # to start the website on a local server
+```ruby
+    # make sure to install Ruby for Ruby solutions and Node for JavaScript solutions.
 ```
 
 6. Enjoy 😎
@@ -54,12 +39,10 @@ Give a ⭐️ if you like this project!
 
 ## Submit an issue
 
-[Issue page](https://github.com/Tadesse-Alemayehu/weather-now/repo_location)
+[Issue page](https://github.com/Tadesse-Alemayehu/weather-now/LeetCode)
 
 ## Acknowledgments
-- Microverse for amusing learning resources.
-- Microverse code reviewers.
-- You! 😄 yes you... for visiting.
+- LeetCode for delivering such curiouse chalenges for us to practice.
 
 ## 📝 License
 
