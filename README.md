@@ -1,9 +1,9 @@
 # My LeetCode chalenges
 
-> I love solving problems, I have 5 star (almost 6 now) for my problem solving skill on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1), This was a while a go. Now I have solved most of the chalenges on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1) I am trying to fix as much problems as possible on LeetCode. 
+> I love solving problems, I have 5 stars (almost 6 now) for my problem-solving skill on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1), This was a while a go. Now I have solved most of the challenges on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1) I am trying to fix as many problems as possible on LeetCode. 
 
 ## Langueges
-I'll mostly soolve problems with `JavaScript` and `Ruby`
+I'll mostly solve problems with `JavaScript` and `Ruby`
 
 
 ## If you like to use my solutions,
@@ -42,7 +42,7 @@ Give a ⭐️ if you like this project!
 [Issue page](https://github.com/Tadesse-Alemayehu/weather-now/LeetCode)
 
 ## Acknowledgments
-- LeetCode for delivering such curiouse chalenges for us to practice.
+- LeetCode for delivering such curious challenges for us to practice.
 
 ## 📝 License
 
