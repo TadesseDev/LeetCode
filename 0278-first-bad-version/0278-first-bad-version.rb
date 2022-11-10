@@ -18,5 +18,5 @@ def first_bad_version(n)
         end
         track=good+((bad-good)/2)
     end
-    return bad
+    bad
 end
