@@ -7,18 +7,17 @@
 
 # @return {Integer}
 def first_bad_version(n)
-    good=0.to_f
-    bad=n.to_f
-    track=(n/2).ceil
+    good=0
+    bad=n
+    track=(n/2)
     while bad-good>1 
-        p track
         if is_bad_version(track)
             bad=track
-            track=good+((bad-good)/2).ceil
+            track=good+((bad-good)/2)
         else
             good=track
-            track=good+((bad-good)/2).ceil
+            track=good+((bad-good)/2)
         end
     end
-    return bad.to_i
+    return bad
 end
