@@ -13,11 +13,10 @@ def first_bad_version(n)
     while bad-good>1 
         if is_bad_version(track)
             bad=track
-            track=good+((bad-good)/2)
         else
             good=track
-            track=good+((bad-good)/2)
         end
+        track=good+((bad-good)/2)
     end
     return bad
 end
