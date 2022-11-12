@@ -26,6 +26,5 @@ def num_islands(grid)
         end
         r+=1
     end
-    # breadth first search
     sum
 end
