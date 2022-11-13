@@ -4,7 +4,6 @@
 @value=[1]
 def climb_stairs(n)
     return 0 if n<1
-    # return n if n<2
     sum=0
     if @solved.include?(n-1)
         index=@solved.index(n-1)
