@@ -5,24 +5,13 @@
 def climb_stairs(n)
     return 0 if n<1
     sum=0
-    if @solved.include?(n-1)
-        index=@solved.index(n-1)
-        sum+=@value[index]
-    else
-        res=climb_stairs(n-1)
-        if res !=0
-            sum+=res
-        end
-    end
-    if @solved.include?(n-2)
-        index=@solved.index(n-2)
-        sum+=@value[index]
-    else
-        res=climb_stairs(n-2)
-        if res !=0
-            sum+=res
-        end
-    end
+    
+        sum+=@value[@solved.index(n-1)] if @solved.include?(n-1)
+        sum+=climb_stairs(n-1) unless @solved.include?(n-1)
+       
+        sum+=@value[@solved.index(n-2)]  if @solved.include?(n-2)
+        sum+=climb_stairs(n-2) unless @solved.include?(n-2)
+    
             @solved.push(n)
             @value.push(sum)
     return sum
