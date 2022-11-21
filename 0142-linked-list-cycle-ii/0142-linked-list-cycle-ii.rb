@@ -11,11 +11,11 @@
 # @return {ListNode}
 def detectCycle(head)
     return nil if head.nil?
-    @cycle=[]
+    @cycle={}
     @iterator=head
     while @iterator.next
-        return @iterator.next if @cycle.include?(@iterator.next)
-        @cycle.push(@iterator)
+        return @iterator.next if @cycle[@iterator.next]
+        @cycle[@iterator]=true
         @iterator=@iterator.next
     end
     nil
