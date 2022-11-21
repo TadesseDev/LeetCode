@@ -10,13 +10,13 @@
 # @param {ListNode} head
 # @return {ListNode}
 def detectCycle(head)
-    return nil if head.nil?
-    @cycle=[]
-    @iterator=head
-    while @iterator.next
-        return @iterator.next if @cycle.include?(@iterator.next)
-        @cycle.push(@iterator)
-        @iterator=@iterator.next
-    end
-    nil
+  visited = {}
+  return nil if head.nil?
+  
+  while head
+    return head.next if visited[head.next]
+    
+    visited[head] = true
+    head = head.next
+  end
 end
