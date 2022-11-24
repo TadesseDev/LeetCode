@@ -10,17 +10,17 @@
 # @param {TreeNode} root
 # @return {Integer[][]}
 def level_order(root)
-    return [] if root.nil?
-    @stack=[[root]]
-    @track=0
-    while @track<@stack.length
-        arr=[]
-        @stack[@track].each do |node|
-            arr.push(node.left) unless node.left.nil?
-            arr.push(node.right) unless node.right.nil?
+@result=[]
+    def level_traverse level
+        return nil if level.empty?
+        @result.push(level.map {|node| node.val})
+        next_level=[]
+        level.each do |node| 
+            next_level.push(node.left) if node.left
+            next_level.push(node.right) if node.right
         end
-         @stack.push(arr) unless arr.empty?
-        @track+=1
+        level_traverse next_level
     end
-    @stack.map {|arr| arr.map {|node| node.val}}
+    level_traverse [root] if root
+    return @result
 end
