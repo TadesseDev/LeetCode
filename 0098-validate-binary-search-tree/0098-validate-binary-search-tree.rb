@@ -10,22 +10,16 @@
 # @param {TreeNode} root
 # @return {Boolean}
 def is_valid_bst(root)
-    
-    def valdiate node
-        return [node.val, node.val] if node.left.nil? && node.right.nil?
-        left=node.val
-        right=node.val
+    def validate(node, min, max)
+        return false if node.val<=min || node.val>=max
         if node.left
-            res=valdiate node.left
-            return false if !res || res[0]>=node.val || res[1]>=node.val
-            left=res[0]
+            return false if !validate( node.left, min, node.val)
         end
         if node.right
-            res=valdiate node.right
-            return false if !res || res[0]<=node.val || res[1]<=node.val
-            right=res[1]
+             return false if !validate( node.right, node.val, max)
         end
-        return [left, right]
+        return true
     end
-    return valdiate(root)&&true
+    min,max=10**31*-1, 10**31
+    validate(root, min, max)!=false
 end
