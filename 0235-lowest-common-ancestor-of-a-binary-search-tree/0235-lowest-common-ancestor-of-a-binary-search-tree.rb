@@ -13,19 +13,16 @@
 
 # @return {TreeNode}
 def lowest_common_ancestor(root, p, q)
-    return nil if root.nil?
-    sum=0
-    if root.left
-        ret=lowest_common_ancestor(root.left, p, q)
-        return ret if ret.class.to_s == "TreeNode"
-        sum+=ret
+@lca=nil
+    def lowest(root, p, q)
+        ret=0
+        ret += lowest(root.left, p, q) if root.left
+        ret += lowest(root.right, p, q) if root.right
+        ret+=1 if root==p || root==q
+
+         @lca=root if ret > 1 && @lca.nil?
+        ret
     end
-    if root.right
-        ret=lowest_common_ancestor(root.right, p, q)
-        return ret if ret.class.to_s == "TreeNode"
-        sum+=ret
-    end
-    sum+=1 if root==p||root==q
-    return root if sum>1
-    sum
+    lowest(root, p, q)
+    @lca
 end
