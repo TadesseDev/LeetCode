@@ -50,7 +50,6 @@ def merge_k_lists(lists)
   
 # ---------------------------------------------------------------
    #     def recurse nodes
-   #     # p nodes
    #     return nil if nodes.length==0
    #     return nodes[0] if nodes.length==1
    #     max_index=0
