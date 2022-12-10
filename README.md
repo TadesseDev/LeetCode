@@ -1,6 +1,6 @@
-# My LeetCode chalenges
+# My LeetCode challenges
 
-> I love solving problems, I have 5 stars (almost 6 now) for my problem-solving skill on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1), This was a while a go. Now I have solved most of the challenges on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1) I am trying to fix as many problems as possible on LeetCode. 
+> I love solving problems, I have 5 stars (almost 6 now) for my problem-solving skill on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1), This was a while a go. Now I have solved most of the challenges on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1) I am trying to solve as many problems as possible on [LeetCode](https://leetcode.com/Tadesse-Alemayehu/). 
 
 ## Langueges
 I'll mostly solve problems with `JavaScript` and `Ruby`
