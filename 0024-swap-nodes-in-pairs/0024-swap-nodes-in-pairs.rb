@@ -20,14 +20,15 @@ def swap_pairs(head)
         iterator=next_iterator
     end
     
-    ### szwich each nodes
+    ### switch each nodes
     for i in  0..couples.length-1
         cur=couples[i].next
         couples[i].next=nil
         cur.next=couples[i]
         couples[i]=cur
     end
-    ### build the switch
+    
+    ### build the the final nodes
     top=couples[0]
     for i in  0..couples.length-1
         couples[i].next.next=couples[i+1]  
