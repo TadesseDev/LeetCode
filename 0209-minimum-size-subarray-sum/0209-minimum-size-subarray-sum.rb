@@ -7,11 +7,10 @@ def min_sub_array_len(target, nums)
         sum+=nums[i]
         window[1]=i
         if sum>=target 
-            p window
             windowSize=window[1]-window[0]+1;
             minLength=windowSize if windowSize<minLength || minLength==0
             sum-=nums[window[0]]
-            sum-=nums[window[1]]
+            sum-=nums[i]
             window[0]+=1
             next;
         end
