@@ -4,15 +4,14 @@
 def longest_substring(s, k)
     @window=0
     @k=k
-    def recurse(arr)
+    def check_if_valid_window_exist(arr)
         arr.each do |win|
-            #validate if the window is valid 
+            # validate if the window is valid 
             next if win.length<=@window
             i,count,valid=0,0,true
-                char=String.new(win)            
-            # p "#{char}"
+                char=String.new(win)    
             while i<char.length && valid
-                # p i
+
                  if char[i]=="1"
                      i+=1
                      next
@@ -25,26 +24,18 @@ def longest_substring(s, k)
                         char[j]="1"
                     end
                    j+=1
-                # p "#{win}, #{char}, #{win[j]},#{count}, #{j}"
                end
                 if count<@k
-                    # p "invalid"
                     #This window is invalid
-                
                     new_windows=win.split(win[i]).filter{|new_window| new_window.length>@window}
-
-                    recurse(new_windows)
+                    check_if_valid_window_exist(new_windows)
                     valid=false
                 end
                 i+=1
-                # p i
             end
-                if valid
-                    # window is valid
-                    @window=win.length 
-                end
+               @window=win.length if valid
         end
     end
-    recurse([s])
+    check_if_valid_window_exist([s])
     @window
 end
