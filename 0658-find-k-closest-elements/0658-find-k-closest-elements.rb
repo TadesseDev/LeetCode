@@ -6,10 +6,12 @@ def find_closest_elements(arr, k, x)
     j=k-1
     i=k
     while i<arr.length
-        if (x-arr[i]).abs < (x-arr[(j-k)+1]).abs
+        newer=(x-arr[i]).abs
+        older=(x-arr[(j-k)+1]).abs
+        if newer < older
                 j=i
         end
-        return arr.slice(j-k+1,k) if (x-arr[i]).abs > (x-arr[(j-k)+1]).abs 
+        return arr.slice(j-k+1,k) if newer > older 
         i+=1
     end
     arr.slice(j-k+1,k) 
