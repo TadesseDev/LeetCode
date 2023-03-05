@@ -8,7 +8,6 @@ def find_closest_elements(arr, k, x)
     while i<arr.length
         if (x-arr[i]).abs <= (x-arr[(j-k)+1]).abs
             if (x-arr[i]).abs < (x-arr[(j-k)+1]).abs
-                p arr[i],arr[j-k]
                 j=i
             end
         else 
