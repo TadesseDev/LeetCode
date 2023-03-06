@@ -2,20 +2,20 @@
 # @param {Integer} k
 # @return {Integer}
 def num_subarray_product_less_than_k(nums, k)
-    window,sum,count=[],1,0
+    j,sum,count=0,1,0
     i=0
     while i<nums.length
         if nums[i]<k
-            window.push(nums[i])
             sum*=nums[i]
+            temp=sum
             while sum>=k
-                shift=window.shift
-                sum/=shift
+                sum/=nums[j]
+                j+=1
             end
-            count+=window.length
+            count+=i-j+1
         else
             sum=1
-            window=[]
+            j=i+1
         end
         i+=1
     end
