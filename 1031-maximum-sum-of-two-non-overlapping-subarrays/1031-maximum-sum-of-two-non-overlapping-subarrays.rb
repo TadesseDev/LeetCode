@@ -11,7 +11,6 @@ def max_sum_two_no_overlap(nums, first_len, second_len)
         while j+second_len<=nums.length
             new_sum=nums.slice(j,second_len).sum
             max_sum=sum+new_sum if sum+new_sum>max_sum
-                    # p [sum, new_sum]
             j+=1
         end
         i+=1
@@ -23,7 +22,6 @@ def max_sum_two_no_overlap(nums, first_len, second_len)
         while j+first_len<=nums.length
             new_sum=nums.slice(j,first_len).sum
             max_sum=sum+new_sum if sum+new_sum>max_sum
-                    # p [sum, new_sum]
             j+=1
         end
         i+=1
