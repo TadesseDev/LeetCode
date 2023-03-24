@@ -19,7 +19,7 @@ def balanced_string(s)
     i=0
     index=[]
     p [exced_hash, count, base]
-    while i<s.length && window>ini_count
+    while i<s.length 
         if exced_hash[s[i]]
             exced_hash[s[i]]-=1
             index.push(i)
