@@ -15,6 +15,7 @@ def balanced_string(s)
     end
     return 0 if count==0
     window=s.length
+    ini_count=count
     i=0
     index=[]
     while i<s.length 
