@@ -15,10 +15,8 @@ def balanced_string(s)
     end
     return 0 if count==0
     window=s.length
-    ini_count=count
     i=0
     index=[]
-    p [exced_hash, count, base]
     while i<s.length 
         if exced_hash[s[i]]
             exced_hash[s[i]]-=1
