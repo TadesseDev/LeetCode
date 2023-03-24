@@ -25,13 +25,6 @@ def balanced_string(s)
             index.push(i)
             count-=1 if exced_hash[s[i]]>=0
         end
-        # while count<0
-        #     ele=index.shift
-        #     exced_hash[s[ele]]+=1
-        #     count+=1
-        # end
-        
-    # p [exced_hash, count, base]
         if count==0
             while exced_hash[s[index[0]]]<0
                 exced_hash[s[index[0]]]+=1
@@ -49,7 +42,7 @@ def balanced_string(s)
             end
             ele=index.shift
             exced_hash[s[ele]]+=1
-            count+=1 if exced_hash[s[ele]]>0
+            count+=1 
         end
         i+=1
     end
