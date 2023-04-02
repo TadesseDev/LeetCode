@@ -29,9 +29,10 @@ $ git clone https://github.com/Tadessedev/LeetCode
 
 👤 **Tadesse Alemayehu**
 
-- GitHub: [@Tadess-Alemayehu](https://github.com/Tadesse-Alemayehu)
-- Twitter: [@TadesseWebDev](https://twitter.com/TadesseWebDev)
-- LinkedIn: [Tadesse Dubale](https://www.linkedin.com/in/tadesse-alemayehu-full-stack-developer/)
+
+- GitHub: [@TadesseDev](https://github.com/Tadessedev)
+- Twitter: [@TadesseDev](https://twitter.com/TadessebDev)
+- LinkedIn: [TadesseDev](https://www.linkedin.com/in/tadessedev)
 
 ## Show your support
 
