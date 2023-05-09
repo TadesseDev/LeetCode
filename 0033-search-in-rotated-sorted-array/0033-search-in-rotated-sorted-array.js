@@ -27,7 +27,6 @@ var search = function(nums, target) {
                 end_i=mid-1
             }
         }
-        console.log(mid)
     }
         
     return  -1; 
