@@ -6,12 +6,10 @@ def is_valid_sudoku(board)
         square_hash={}
         for j in x..x+2
             for k in y..y+2
-                # p [j,k]
                 return false if square_hash[arr[j][k]] 
                 square_hash[arr[j][k]]=true if arr[j][k] !='.'
             end
         end
-        # p "end"
         true
     end
     def taceCell(cel, arr)
@@ -23,8 +21,7 @@ def is_valid_sudoku(board)
             left_hash[arr[i][k]] = true if arr[i][k] !='.'
             right_hash[arr[k][j]] = true if arr[k][j] !='.'
         end
-        # p left_hash
-        return true;
+         true
     end
     
     j=0
@@ -41,5 +38,5 @@ def is_valid_sudoku(board)
     for m in 0..8 do
         return false if !taceCell([m,m], board)
     end
-    return true;
+    return true
 end
