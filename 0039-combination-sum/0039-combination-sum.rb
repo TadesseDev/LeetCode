@@ -17,7 +17,7 @@ def combination_sum(candidates, target)
             temp.each do |arr|
                 new_res=[[*arr[0]].push(ele), arr[1]+ele]
                 if new_res[1]<=target
-                    new_valid_elements.push(new_res)
+                    new_valid_elements.push(new_res) if new_res[1]<target
                     @result.push(new_res[0]) if new_res[1]==target
                 end
             end
