@@ -25,7 +25,8 @@ def combination_sum2(candidates, target)
                      end
                 end
             end
-            next_permutuation.push([[ele], ele])
+            next_permutuation.push([[ele], ele]) if  @result[[ele]].nil?
+             @result[[ele]]=true
             permutuation=next_permutuation
         end
         # p permutuation
