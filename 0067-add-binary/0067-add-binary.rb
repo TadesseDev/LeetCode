@@ -18,6 +18,12 @@ def add_binary(a, b)
                 return res.to_s
             end
         end
+        
+        if i<0 && cary==0
+           return b[0..j] 
+        elsif j<0 && cary==0
+           return a[0..i] 
+        end
              res=(a[i] || 0).to_i if i>=0
              res+=(b[j] || 0).to_i if j>=0
             res+=cary
