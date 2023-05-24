@@ -14,7 +14,6 @@ def permute_unique(nums)
         cur=nums[i]
         nex_nums=i>0 ? nums[0..i-1] : [] 
         nex_nums=nex_nums+nums[i+1..nums.length]
-        # p [nex_nums, i,nums[i+1..nums.length]]
         res=unique(nex_nums)
         
         res.each do |arr|
