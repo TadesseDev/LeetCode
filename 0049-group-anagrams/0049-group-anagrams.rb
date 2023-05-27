@@ -16,5 +16,5 @@ def group_anagrams(strs)
     end
     result=[]
     hash.each {|key, val| result.push(val)}
-    p result
+    result
 end
