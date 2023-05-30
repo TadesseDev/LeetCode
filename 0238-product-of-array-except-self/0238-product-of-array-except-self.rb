@@ -5,7 +5,6 @@ def product_except_self(nums)
     # product=nums.reduce {|pro,num| num*pro}
     pro_array=Array.new(nums.length).fill(0)
     if product==0
-        # product=1
         zeros=0
         product=nums.reduce(1) do |pro, num|
             if num==0
