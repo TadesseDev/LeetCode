@@ -16,7 +16,6 @@ def product_except_self(nums)
             end
             pro
         end
-        # p [product, zeros]
         return pro_array if zeros>1
         pro_array[nums.index(0)]=product
     else
