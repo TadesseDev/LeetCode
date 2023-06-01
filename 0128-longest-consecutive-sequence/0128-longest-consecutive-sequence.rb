@@ -5,7 +5,6 @@ def longest_consecutive(nums)
     nums.sort!.uniq!
     count=1
     max_count=1
-    p nums
     for i in 1..nums.length-1
         if nums[i]!=nums[i-1]+1
             max_count=count if count>max_count
