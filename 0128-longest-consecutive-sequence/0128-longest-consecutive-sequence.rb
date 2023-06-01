@@ -2,11 +2,13 @@
 # @return {Integer}
 def longest_consecutive(nums)
     return 0 if nums.length<1
-    nums.sort!.uniq!
+    nums.sort!
     count=1
     max_count=1
     for i in 1..nums.length-1
-        if nums[i]!=nums[i-1]+1
+        if nums[i]==nums[i-1]
+            next;
+        elsif nums[i]!=nums[i-1]+1
             max_count=count if count>max_count
             count=0
         end
