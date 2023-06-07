@@ -15,7 +15,7 @@ var deleteDuplicates = function(head) {
     let temp=new ListNode(head.val, head.next)
     let fi=temp
     while(temp && temp.next){
-        while(temp && temp.next && temp.val==temp.next.val){
+        while(temp.next && temp.val==temp.next.val){
             temp.next=temp.next.next
         }
         temp=temp.next
