@@ -9,7 +9,6 @@ var checkIfInstanceOf = function(obj, classFunction) {
         const classConst=classFunction.prototype.constructor
         return valConst==classConst || valConst.prototype instanceof classConst
     }catch(e){
-        // console.log(e)
        return false
     }
 };
