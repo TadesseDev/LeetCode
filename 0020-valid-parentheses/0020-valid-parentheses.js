@@ -10,7 +10,6 @@ var isValid = function(s) {
             stack.push(char)
         }
         else{
-            // console.log(stack.pop(), stack, char)
             if(hash[stack.pop()]==char){
                 continue;
         }
@@ -19,6 +18,5 @@ var isValid = function(s) {
             }
         }
     }
-        // console.log(stack, char)
     return stack.length==0
 };
