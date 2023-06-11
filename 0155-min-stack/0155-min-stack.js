@@ -11,9 +11,8 @@ var MinStack = function() {
 MinStack.prototype.push = function(val) {
    this.arr.push(val)
         let i=0
-        while(i<this.minArr.length && val>this.minArr[i]){
+        while(i<this.minArr.length && val>this.minArr[i])
             i+=1;
-        }
         this.minArr.splice(i,0,val)
 };
 
@@ -24,9 +23,8 @@ MinStack.prototype.pop = function() {
    let val=this.arr[this.arr.length-1]
        this.arr.pop()
     let i=0
-        while(val!=this.minArr[i]){
+        while(val!=this.minArr[i])
             i+=1;
-        }
         this.minArr.splice(i,1)
 };
 
