@@ -17,21 +17,14 @@ var SnapshotArray = function(length) {
  * @return {void}
  */
 SnapshotArray.prototype.set = function(index, val) {
-    // if(index==9430)
-    //     console.log("snap id is", this.snap_id, val)
     this.arr[index]=val;
         this.snapStore[this.snap_id][index]=val
-
-    // if(index==9430)
-    //     console.log("snap id is", this.snap_id)
 }
 
 /**
  * @return {number}
  */
 SnapshotArray.prototype.snap = function() {
-    // if(this.snap_id>15000)
-       // console.log(this.snap_id)
     this.snap_id+=1
     this.snapStore[this.snap_id]={}
     return this.snap_id-1
@@ -43,10 +36,7 @@ SnapshotArray.prototype.snap = function() {
  * @return {number}
  */
 SnapshotArray.prototype.get = function(index, snap_id) {
-    // if(index==9430)
-    //     console.log(this.snap_id, snap_id)
     if(this.snapStore[snap_id]){
-        // console.log("snap found", snap_id,this.snapStore[snap_id][index])
         while(snap_id>0 && typeof this.snapStore[snap_id][index]!= "number"){
          snap_id-=1
         }
