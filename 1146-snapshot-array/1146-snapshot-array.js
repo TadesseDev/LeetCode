@@ -2,13 +2,11 @@
  * @param {number} length
  */
 var SnapshotArray = function(length) {
-    this.arr=new Array(length)
-    this.arr.fill(0)
+    this.arr=new Array()
+    // this.arr.fill(0)
     this.snapStore={}
     this.snap_id=0
-    this.arr.forEach((val,index)=>{
-          this.snapStore[this.snap_id]={[index]: 0}
-    })
+    this.snapStore[this.snap_id]={}
 };
 
 /** 
