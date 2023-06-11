@@ -37,9 +37,8 @@ SnapshotArray.prototype.snap = function() {
  */
 SnapshotArray.prototype.get = function(index, snap_id) {
     if(this.snapStore[snap_id]){
-        while(snap_id>0 && typeof this.snapStore[snap_id][index]!= "number"){
+        while(snap_id>0 && typeof this.snapStore[snap_id][index]!= "number")
          snap_id-=1
-        }
         return this.snapStore[snap_id][index]||0
     }
    return 0
