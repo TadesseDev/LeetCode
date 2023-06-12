@@ -12,7 +12,7 @@ var searchMatrix = function(matrix, target) {
         mid=Math.floor((left+right)/2)
         if(matrix[mid][0]==target){
             return true
-        }else if(target>matrix[mid][0]){
+        }else if(target>matrix[mid][matrix[0].length-1]){
             left=mid+1
         }else{
             right=mid-1
