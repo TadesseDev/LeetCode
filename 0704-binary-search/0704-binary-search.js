@@ -12,11 +12,7 @@ var search = function(nums, target) {
     let left=0
     let right=arr.length
     let mid=Math.floor((left+right)/2)//1
-    let set=new Set()
     while(left<=right){
-        // if(set.has(mid))
-        //     return -1
-        // set.add(mid)
         if(target==arr[mid]){ //arr[4]==-1
             return mid
         }else if(target>arr[mid]){//-1>arr[1] | 
@@ -25,7 +21,6 @@ var search = function(nums, target) {
         }else{
             right=mid-1 // // //
             mid=Math.floor((left+right)/2)//1
-
         }
     }
     return -1
