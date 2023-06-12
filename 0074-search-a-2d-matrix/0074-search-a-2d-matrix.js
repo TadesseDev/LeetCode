@@ -19,7 +19,6 @@ var searchMatrix = function(matrix, target) {
         }
     }
     
-    // console.log(mid, matrix.length)
     if(target>matrix[mid][matrix[0].length-1]){
             mid+=1
         }else if(target<matrix[mid][0]){
