@@ -20,7 +20,6 @@ var search = function(nums, target) {
         }else{
             right=mid-1 // // //
         }
-            // mid=Math.floor((left+right)/2)//1
     }
     return -1
 };
