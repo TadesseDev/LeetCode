@@ -27,8 +27,6 @@ var search = function(nums, target) {
             mid=Math.floor((left+right)/2)//1
 
         }
-        // if(target>arr[right]||target<arr[left])
-        //     return -1
     }
     return -1
 };
