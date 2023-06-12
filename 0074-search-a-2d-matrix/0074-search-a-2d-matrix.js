@@ -29,6 +29,7 @@ var searchMatrix = function(matrix, target) {
         return false
     let row=matrix[mid]
     left=0,right=row.length-1
+    
     while(left<=right){
         mid=Math.floor((left+right)/2)
         if(row[mid]==target){
