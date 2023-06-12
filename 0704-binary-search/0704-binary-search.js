@@ -17,11 +17,11 @@ var search = function(nums, target) {
             return mid
         }else if(target>arr[mid]){//-1>arr[1] | 
             left=mid+1
-            mid=Math.ceil((left+right)/2)//1
+            // mid=Math.ceil((left+right)/2)//1
         }else{
             right=mid-1 // // //
-            mid=Math.floor((left+right)/2)//1
         }
+            mid=Math.floor((left+right)/2)//1
     }
     return -1
 };
