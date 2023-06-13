@@ -14,9 +14,9 @@ var maxProfit = function(prices) {
       }else if(prices[r]>max){
           max=prices[r]
           let newProfit=max-min
-          if(newProfit>profit){
+          if(newProfit>profit)
               profit=newProfit
-          }
+          
       }
       r+=1
   }
