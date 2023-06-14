@@ -3,16 +3,16 @@
  */
 function memoize(fn) {
     let memory={}
-    memory[JSON.stringify(fn)]={}
+    memory[fn]={}
     return function(...args) {
         // console.log(memory[JSON.stringify(fn)][args])
-        if(memory[JSON.stringify(fn)][args]){
+        if(memory[fn][args]){
             // console.log("becomes true")
-            return memory[JSON.stringify(fn)][args].result
+            return memory[fn][args].result
         }
         result=fn(...args)
         // memory[JSON.stringify(fn)][args]={value: JSON.stringify(args)}
-        memory[JSON.stringify(fn)][args]={result: result}
+        memory[fn][args]={result: result}
         return result
     }
 }
