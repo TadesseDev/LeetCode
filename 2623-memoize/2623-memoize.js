@@ -5,13 +5,10 @@ function memoize(fn) {
     let memory={}
     memory[fn]={}
     return function(...args) {
-        // console.log(memory[JSON.stringify(fn)][args])
         if(memory[fn][args]){
-            // console.log("becomes true")
             return memory[fn][args].result
         }
         result=fn(...args)
-        // memory[JSON.stringify(fn)][args]={value: JSON.stringify(args)}
         memory[fn][args]={result: result}
         return result
     }
