@@ -18,6 +18,5 @@ var generateParenthesis = function(n) {
         return ret
     }
   let result = generator(n*2-1).map(ele=>ele[2])
-  // console.log(result)
   return result
 };
