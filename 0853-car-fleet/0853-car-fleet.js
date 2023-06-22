@@ -20,6 +20,7 @@ var carFleet = function(target, position, speed) {
             // console.log(i)
             let diff1=(target-arr[i-1][0])/arr[i-1][1]
             let diff2=(target-arr[i][0])/arr[i][1]
+            console.log(diff1, diff2)
             if(diff1<=diff2){
                 arr[i-1][1]=arr[i][1]
                 arr[i-1][0]=arr[i][0]
