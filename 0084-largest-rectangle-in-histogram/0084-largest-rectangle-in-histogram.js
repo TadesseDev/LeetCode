@@ -16,8 +16,6 @@ var largestRectangleArea = function(heights) {
     for(let index=1;index<heights.length;index++){
         let extendIndex=index
         while(stack.length && heights[index]<stack[stack.length-1][1]){ // 1 && 1<2 | 2 && 5<1 /false || 2 && 6<5 || 2 && 2<5 || 2 && 3<2
-            
-    // console.log(stack)
             let val=stack.pop()
             extendIndex=val[0]
             let he=((index-val[0]))*val[1] // 1-0*2 =1 || 4-3* 6 || 4-2*5
