@@ -36,10 +36,12 @@ TimeMap.prototype.get = function(key, timestamp) {
         }
         if(r<0)
             return ""
-        else if(timestamp>this.timeMap[key][mid][0])
-            return this.timeMap[key][mid][1]
-        else if(timestamp<this.timeMap[key][mid][0] && mid>0)
-            return this.timeMap[key][mid-1][1]
+        if(l>r)
+            return this.timeMap[key][r][1]
+        else if(timestamp>this.timeMap[key][l][0])
+            return this.timeMap[key][l][1]
+        else if(timestamp<this.timeMap[key][l][0] && l>0)
+            return this.timeMap[key][l-1][1]
         else 
             return ""
 
