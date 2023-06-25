@@ -24,9 +24,8 @@ TimeMap.prototype.set = function(key, value, timestamp) {
 TimeMap.prototype.get = function(key, timestamp) {
     if(this.timeMap[key]){
         let l=0,r=this.timeMap[key].length-1
-        let mid=Math.floor((l+r)/2)
         while(l<=r){
-            mid=Math.floor((l+r)/2)
+            let mid=Math.floor((l+r)/2)
             if(this.timeMap[key][mid][0]==timestamp)
                 return this.timeMap[key][mid][1]
             else if(timestamp>this.timeMap[key][mid][0])
