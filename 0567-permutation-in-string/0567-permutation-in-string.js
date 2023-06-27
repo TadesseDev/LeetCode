@@ -4,29 +4,60 @@
  * @return {boolean}
  */
 var checkInclusion = function(s1, s2) {
-    let map={};
+    let map1={},map2={}, match=0;
     for(let ch of s1){
-        if(map[ch])
-            map[ch]=map[ch]+1
+        if(map1[ch])
+            map1[ch]+=1
         else
-            map[ch]=1
+            map1[ch]=1
+    };
+
+    for(let i=0;i<s1.length;i+=1){
+        let ch=s2[i]
+        if(map2[ch])
+            map2[ch]+=1
+        else
+            map2[ch]=1
     };
     
-    let i=0
-    while((i-s1.length)<s2.length){
-        if(map[s2[i]]){
-            let j=i
-            let tempMap={...map}
-            while(j<s2.length&&tempMap[s2[j]]){
-                tempMap[s2[j]]-=1
-                j+=1
-            
-            if((j-i)==s1.length)
-                return true}
-            if(!map[s2[i]]&&map[s2[i]]!=0)
-                i=j
-        }
+    let keyLen=Object.keys(map1).length
+    Object.keys(map2).forEach((key)=>{
+        if(map1[key]===map2[key])
+            match+=1
+    })
+    if(match==keyLen)
+        return true
+    
+    
+    let i=s1.length,j=0
+    while(i<s2.length){
+        // console.log(map2, match, i)
+        
+        let ch=s2[i]
+        if(map1.hasOwnProperty(ch)&&map1[ch]===map2[ch])
+            match-=1
+        
+        if(map2[ch])
+            map2[ch]+=1
+        else
+            map2[ch]=1
+        
+    if(map1[ch]==map2[ch])
+        match+=1
+        
+    if(map1[s2[j]]===map2[s2[j]])
+        match-=1
+    map2[s2[j]]-=1
+    if(map1[s2[j]]===map2[s2[j]])
+        match+=1
+    if(match==keyLen)
+        return true
+        
+        
+        // console.log(map2, match, i, map1[ch], map2[ch])
         i+=1
+        j+=1
     }
+    
     return false
 };
