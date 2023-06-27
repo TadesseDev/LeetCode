@@ -14,7 +14,7 @@ var checkInclusion = function(s1, s2) {
     
     let i=0
     while(i<s2.length){
-        if([s2[i]]){
+        if(map[s2[i]]){
             let j=i
             let tempMap={...map}
             while(j<s2.length&&tempMap[s2[j]]){
