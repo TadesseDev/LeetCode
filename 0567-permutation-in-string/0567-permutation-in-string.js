@@ -20,9 +20,11 @@ var checkInclusion = function(s1, s2) {
             while(j<s2.length&&tempMap[s2[j]]){
                 tempMap[s2[j]]-=1
                 j+=1
-            }
+            
             if((j-i)==s1.length)
-                return true
+                return true}
+            if(!map[s2[i]]&&map[s2[i]]!=0)
+                i=j
         }
         i+=1
     }
