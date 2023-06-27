@@ -13,7 +13,7 @@ var checkInclusion = function(s1, s2) {
     };
     
     let i=0
-    while(i<s2.length){
+    while((i-s1.length)<s2.length){
         if(map[s2[i]]){
             let j=i
             let tempMap={...map}
