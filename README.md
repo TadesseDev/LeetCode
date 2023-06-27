@@ -1,6 +1,6 @@
 # My LeetCode challenges
 
-> I love solving problems, I have 5 stars (almost 6 now) for my problem-solving skill on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1), This was a while a go. Now I have solved most of the challenges on [HackerRank](https://www.hackerrank.com/Tadesse_A?hr_r=1) I am trying to solve as many problems as possible on [LeetCode](https://leetcode.com/Tadessedev/). 
+> I love solving problems, I have 5 stars (almost 6 now) for my problem-solving skill on [HackerRank](https://www.hackerrank.com/TadesseFullStack), This was a while a go. Now I have solved most of the challenges on [HackerRank](https://www.hackerrank.com/TadesseFullStack) I am trying to solve as many problems as possible on [LeetCode](https://leetcode.com/Tadessedev/). 
 
 ## Langueges
 I'll mostly solve problems with `JavaScript` and `Ruby`
@@ -31,7 +31,7 @@ $ git clone https://github.com/Tadessedev/LeetCode
 
 
 - GitHub: [@TadesseDev](https://github.com/Tadessedev)
-- Twitter: [@TadesseDev](https://twitter.com/TadessebDev)
+- Twitter: [@TadesseDev](https://twitter.com/TadesseDev)
 - LinkedIn: [TadesseDev](https://www.linkedin.com/in/tadessedev)
 
 ## Show your support
