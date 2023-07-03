@@ -19,7 +19,6 @@ var maxSlidingWindow = function(nums, k) {
         }else if(nums[j]==max){
             let temp=j+1, newMax=nums[temp]
             while(temp<=i){
-                // console.log(newMax)
                 if(newMax<nums[temp])
                     newMax=nums[temp]
                 temp+=1
