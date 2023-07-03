@@ -30,9 +30,8 @@ var minWindow = function(s, t) {
                     hash[ch]-=1
                     sum-=1
                     break;
-                }else if(sum==0&&win.length>s.slice(j+1,i+1).length){
+                }else if(sum==0&&win.length>s.slice(j+1,i+1).length)
                             win=s.slice(j+1,i+1)
-                        }
                 j+=1
             }
         }
