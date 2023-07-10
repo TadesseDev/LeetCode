@@ -30,24 +30,19 @@ var mergeTwoLists = function(list1, list2) {
     let head=list
     while(list1){
         while(list2&&list2.val<=list1.val){
-            let temp=list2
+            list.next=list2
             list2=list2.next
-            temp.next=null
-            list.next=temp
             list=list.next
         }
         list.next=list1
         list1=list1.next
         list=list.next
-        list.next=null
     }
     
     
         while(list2){
-            let temp=list2
+            list.next=list2
             list2=list2.next
-            temp.next=null
-            list.next=temp
             list=list.next
         }
     return head
