@@ -19,7 +19,6 @@ var reorderList = function(head) {
     while(head){
         arr.push(head)
         head=head.next
-        arr[k].next=null
         k+=1
     }
     let i=0,j=arr.length-1
@@ -37,5 +36,6 @@ var reorderList = function(head) {
         newArr[i-1].next=newArr[i]
         i+=1
     }
+    newArr[newArr.length-1].next=null
     return newArr[0]
 };
