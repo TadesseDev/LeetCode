@@ -37,7 +37,5 @@ var reorderList = function(head) {
         newArr[i-1].next=newArr[i]
         i+=1
     }
-    // console.log(newArr)
-    
     return newArr[0]
 };
