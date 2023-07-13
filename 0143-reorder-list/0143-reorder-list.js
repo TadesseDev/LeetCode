@@ -11,9 +11,9 @@
  */
 var reorderList = function(head) {
     /*
-    head
-    nextHead
-    */
+    // head
+    // nextHead
+  
     let arr=[]
     let k=0
     while(head){
@@ -38,4 +38,44 @@ var reorderList = function(head) {
     }
     newArr[newArr.length-1].next=null
     return newArr[0]
+     */
+    
+    if(!head.next)
+        return head
+    let slow=head, fast=head
+    // Find the middle of the nodes
+    while(fast.next&&fast.next.next){
+        slow=slow.next
+        fast=fast.next.next
+    }
+    let first=head, second=slow.next
+    slow.next=null;
+    // reverse the flow of the second hald
+    function reverseNode(next, node){
+        if(!node.next){
+            node.next=next
+    // console.log("Reverse second is: ",next,node)
+            return node
+        }
+        let nextNode=node.next
+        node.next=next
+    // console.log("Reverse second is: ",node)
+        let val= reverseNode(node, nextNode)
+        return val
+    }
+    second=reverseNode(null, second)
+        // console.log(second)
+    let result=first
+    let temp=result
+    while(first&&second){
+        // let firstTemp=first
+        let secondTemp=second
+        second=second.next
+        first=first.next
+        result.next=secondTemp
+        result.next.next=first
+        result=result.next.next
+        // console.log(result)
+    }
+    return temp
 };
