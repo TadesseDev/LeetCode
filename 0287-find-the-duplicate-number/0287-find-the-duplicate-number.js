@@ -3,9 +3,10 @@
  * @return {number}
  */
 var findDuplicate = function(nums) {
-    nums.sort((a,b)=>a-b)
-    let i=0
-    while(nums[i]!=nums[i+1]){
+let hash={} 
+let i=0
+    while(!hash[nums[i]]){
+        hash[nums[i]]=true
         i+=1
     }
     return nums[i]
