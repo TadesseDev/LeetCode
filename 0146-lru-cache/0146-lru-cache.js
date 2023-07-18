@@ -59,7 +59,7 @@ LRUCache.prototype.remove = function(key) {
             node.prev.next=node.next
             node.next.prev=node.prev
         }
-    delete this.hash[key]
+    this.hash[key]=null
 }
 LRUCache.prototype.insertNode = function(key, value) {
     let node=new Node(value, key)
