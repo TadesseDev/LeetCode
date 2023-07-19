@@ -33,7 +33,6 @@ var reverseKGroup = function(head, k) {
                 nex.next=hea
                 nex=tai
             }
-            // console.log(right, result)
             left=temp
             right=0
         }else{
