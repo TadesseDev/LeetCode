@@ -14,17 +14,11 @@ var isBalanced = function(root) {
 
     function recurse(root){
             if(!root)
-        return true
+        return -1
     let lc=recurse(root.left)
-    if(lc===false)
-        return false;
     let rc=recurse(root.right)
-    if(rc===false)
+    if(lc===false||rc===false)
         return false
-    if(lc===true)
-        lc=-1
-    if(rc===true)
-        rc=-1
     if(Math.abs(lc-rc)>1)
         return false
     return Math.max(lc, rc)+1
