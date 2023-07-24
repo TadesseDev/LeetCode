@@ -18,9 +18,10 @@ var isSameTree = function(p, q) {
        return false;
        
    let res1=isSameTree(p.left, q.left)
+   if(!res1)
+       return false
    let res2=isSameTree(p.right, q.right)
-   
-   if(!res1 || !res2)
+   if(!res2)
        return false
    return true
 };
