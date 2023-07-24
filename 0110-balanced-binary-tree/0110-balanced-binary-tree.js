@@ -25,10 +25,8 @@ var isBalanced = function(root) {
         lc=-1
     if(rc===true)
         rc=-1
-    if(Math.abs(lc-rc)>1){
-        console.log("falling here")
+    if(Math.abs(lc-rc)>1)
         return false
-    }
     return Math.max(lc, rc)+1
     }
     let res = recurse(root) 
