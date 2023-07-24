@@ -12,16 +12,17 @@
  */
 
 var diameterOfBinaryTree = function(root) {
-    let sum=0
+    let diameter=0
         function findDepth(node){
         if(!node)
             return -1
         let lc=findDepth(node.left)+1
         let rc=findDepth(node.right)+1
-        if(lc+rc>sum)
-            sum=lc+rc
-        return Math.max(lc,rc)
+        if(lc+rc>diameter)
+            diameter=lc+rc
+        let height= Math.max(lc,rc)
+        return height
     }
     findDepth(root)
-return sum
+return diameter
 }; 
