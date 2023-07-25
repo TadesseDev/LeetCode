@@ -37,11 +37,10 @@ var isSubtree = function(root, subRoot) {
         let res=findRoot(container.left, subContainer)
         if(res)
             return res
-        
+
         res=findRoot(container.right, subContainer) 
-        if(res)
-            return res
-        return false
+    
+        return res
     }
     
     return findRoot(root, subRoot)
