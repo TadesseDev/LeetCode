@@ -22,9 +22,8 @@ var isSubtree = function(root, subRoot) {
         if(!res)
             return false
         res=isEqual(container.right, subContainer.right)
-        if(!res)
-            return false
-        return true
+
+        return res
     }
     // finde if the root of the subRoot tree is in the root node
     function findRoot(container, subContainer){
