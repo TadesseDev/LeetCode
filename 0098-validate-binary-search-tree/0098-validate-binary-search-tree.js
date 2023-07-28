@@ -24,25 +24,17 @@ var isValidBST = function(root) {
         let left=validBST(root.left)
         let right=validBST(root.right)
         if(result){
-            if(left){
-                if(left[1]>=root.val){
+            if(left&&left[1]>=root.val){
                     result=false
                     return
-                }
-            }else{
-                left=[root.val, root.val]
             }
-            if(right){
-                if(right[0]<=root.val){
+            if(right&&right[0]<=root.val){
                     result=false
                     return
-                }
-            }else{
-                right=[root.val, root.val]
             }
             
-            return [left[0], right[1]]
-        }
+            return [left?left[0]:root.val, right?right[1]:root.val]
+        } 
         return
     }
     validBST(root)
