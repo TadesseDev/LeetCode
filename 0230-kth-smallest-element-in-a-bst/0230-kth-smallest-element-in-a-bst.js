@@ -17,10 +17,10 @@ var kthSmallest = function(root, k) {
         if(!root||result)
             return s
         let left=inorderTraverse(root.left, s)
-        let current=left+1
-        if(current==k)
+
+        if(left+1==k)
             result=root.val
-        let right=inorderTraverse(root.right, current)
+        let right=inorderTraverse(root.right, left+1)
         return right
     }
     inorderTraverse(root, 0)
