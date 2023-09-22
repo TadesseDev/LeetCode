@@ -1,53 +1,65 @@
-/**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
- */
-
-/**
- * Encodes a tree to a single string.
- *
- * @param {TreeNode} root
- * @return {string}
- */
 var serialize = function(root) {
-    if(!root)
-        return "null"
-    let left=serialize(root.left)
-    let right=serialize(root.right)
-    return `${root.val},${left},${right}`
-};
-
-/**
- * Decodes your encoded data to tree.
- *
- * @param {string} data
- * @return {TreeNode}
- */
-var deserialize = function(data) {
-    // console.log(data)
-    let index=0;
-    let result=data.split(",")
-    function buildTree(){
-        if(result[index]=="null" || index>=result.length){
-            // console.log("exception here")
-            index+=1
-            return null
-        }
-        let root= new TreeNode(result[index])
-        // console.log(result[index])
-        index+=1;
-         root.left=buildTree()
-         root.right=buildTree()
-        
-        return root
+    if (!root) {
+        return "[]"; // Return an empty array for null root
     }
-    return buildTree()
+    
+    let result = [];
+    let queue = [root];
+    let index = 0;
+    
+    while (index < queue.length) {
+        let node = queue[index];
+        
+        if (node) {
+            result.push(node.val); // Push the value of the node to the result array
+            
+            // Enqueue left child
+            queue.push(node.left);
+            
+            // Enqueue right child
+            queue.push(node.right);
+        } else {
+            result.push(null); // Push null for null nodes
+        }
+        
+        index++;
+    }
+    
+    // Remove trailing null values from the result
+    while (result[result.length - 1] === null) {
+        result.pop();
+    }
+    
+    return JSON.stringify(result);
 };
 
-/**
- * Your functions will be called as such:
- * deserialize(serialize(root));
- */
+var deserialize = function(data) {
+    if (data === "[]") {
+        return null; // Return null for empty array
+    }
+    
+    let arr = JSON.parse(data);
+    let root = new TreeNode(arr[0]);
+    let queue = [root];
+    let index = 0;
+    
+    index++;
+    
+    while (index < arr.length) {
+        let node = queue.shift();
+        
+        if (arr[index] !== null) {
+            node.left = new TreeNode(arr[index]);
+            queue.push(node.left);
+        }
+        index++;
+        
+        if (index < arr.length && arr[index] !== null) {
+            node.right = new TreeNode(arr[index]);
+            queue.push(node.right);
+        }
+        index++;
+    }
+    
+    return root;
+};
