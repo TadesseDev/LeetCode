@@ -58,22 +58,10 @@ WordDictionary.prototype.search = function(word) {
             return
         }
         let val=words.shift()
-        // if(val=='.'){
-        //     for(let node of root.child){
-        //       matchChar(node, words) 
-        //     }
-        // }else{
-        // let myWord=[..words]
         for(let node of root.child){
-            if(val==node.val||val=='.'){
-                // if(word==".at")
-                //     console.log("before",words)
+            if(val==node.val||val=='.')
               matchChar(node, [...words]) 
-                // if(word==".at")
-                //     console.log("after",words)
-                }
             } 
-        // }
     }
     matchChar(this.tree, searchWord)
     return found
