@@ -4,13 +4,9 @@
  * @return {number}
  */
 var numberOfEmployeesWhoMetTarget = function(hours, target) {
-    // let sortedHour=hours.sort((a,b)=>a-b)
+    let sortedHour=hours.sort((a,b)=>a-b)
     let i=0
-    let count=0
-    while(i<hours.length){
-        if(hours[i]>=target)
-            count++
+    while(hours[i]<target)
         i++
-    }
-    return count
+    return hours.length-i
 };
