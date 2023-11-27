@@ -13,7 +13,7 @@ var fizzBuzz = function(n) {
         else if(start%5==0)
             answer.push("Buzz")
         else
-            answer.push(start.toString())
+            answer.push(start+"")
         start++
     }
     return answer
