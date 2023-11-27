@@ -15,5 +15,5 @@ var countPrimes = function(n) {
         }
     }
     return arr.filter(ele=>ele).length-2
-
+    
 };
