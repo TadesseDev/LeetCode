@@ -6,7 +6,7 @@
 var mergeAlternately = function(word1, word2) {
     let i=0,j=0,res=""
     while(i<word1.length&&j<word2.length){
-        res+=word1[i]+word2[j]
+        res+=word1.charAt(i)+word2.charAt(j)
         i++
         j++
     }
