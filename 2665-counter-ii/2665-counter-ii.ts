@@ -7,23 +7,23 @@ type Counter = {
 function createCounter(init: number): Counter {
     let i=init;
     
-    function increment(){
+
+
+    
+    
+    return ({
+     increment(){
         // i+=1
         return ++i
-    }
-    function decrement(){
+    },
+      decrement(){
         // i-=1
         return --i
-    }
-    function reset(){
+    },
+    reset(){
         i=init;
         return i
     }
-    
-    return ({
-        increment,
-        decrement,
-        reset
     })
 };
 
