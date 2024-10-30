@@ -8,12 +8,12 @@ function createCounter(init: number): Counter {
     let i=init;
     
     function increment(){
-        i+=1
-        return i
+        // i+=1
+        return ++i
     }
     function decrement(){
-        i-=1
-        return i
+        // i-=1
+        return --i
     }
     function reset(){
         i=init;
@@ -23,7 +23,7 @@ function createCounter(init: number): Counter {
     return ({
         increment,
         decrement,
-        reset,
+        reset
     })
 };
 
