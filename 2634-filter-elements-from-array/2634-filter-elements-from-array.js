@@ -5,8 +5,9 @@
  */
 var filter = function(arr, fn) {
     const filterArray = [] 
-    for(let i=0; i<arr.length; i++){
-            fn(arr[i], i) && filterArray.push(arr[i])
-    }
+
+    arr.forEach((val, i)=>{
+            fn(val, i) && filterArray.push(val)
+        });
     return filterArray
 };
