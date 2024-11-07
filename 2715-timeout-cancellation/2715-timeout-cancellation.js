@@ -5,18 +5,12 @@
  * @return {Function}
  */
 var cancellable = function(fn, args, t) {
-    const now = new Date().getTime()
-    
-    // check if t is completed 
-    // if not cancel the delay function. 
-    // if yes, call fn with the provided rgument 
+    const now = Date.now()+t
     const delay = setTimeout(()=>fn(...args), t)
    const cancelFn = ()=>{
        if(new Date(now+t) >= new Date()){
            clearTimeout(delay)
-           return;
         }
-         return
     };
     return cancelFn
 };
