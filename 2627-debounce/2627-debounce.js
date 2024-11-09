@@ -4,7 +4,7 @@
  * @return {Function}
  */
 var debounce = function(fn, t) {
-    let timestamp = setTimeout(()=>{}, t)
+    let timestamp = 0
     return function(...args) {
         clearTimeout(timestamp)
         timestamp = setTimeout(()=>fn(...args), t)
