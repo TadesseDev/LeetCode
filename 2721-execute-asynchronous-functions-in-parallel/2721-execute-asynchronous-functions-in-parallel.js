@@ -14,7 +14,6 @@ var promiseAll = function(functions) {
             }).catch(err=>rej(err))
         }
     });
-    
 };
 
 /**
