@@ -5,10 +5,12 @@
 var promiseAll = function(functions) {
     return new Promise((res, rej)=>{
         const results = []
+        let count=functions.length
         for(let i=0;i<functions.length; i++){
             functions[i]().then((val)=>{
                 results[i]=val
-                if(Object.keys(results).length == functions.length){
+                count--;
+                if(count == 0){
                     res(results)
                 }
             }).catch(err=>rej(err))
