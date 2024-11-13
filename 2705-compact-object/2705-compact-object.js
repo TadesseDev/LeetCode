@@ -8,8 +8,6 @@ var compactObject = function(obj) {
         if(!(obj instanceof Object))
             return obj
         const result = obj instanceof Array ? [] : {}
-
-        // const keys = Object.keys(obj)
        for(let key in obj){
             if(obj[key]){
                 const response = compactMe(obj[key])
