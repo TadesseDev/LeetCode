@@ -16,6 +16,17 @@ var ArrayWrapper = function(nums) {
     // }
 };
 
+// ArrayWrapper.prototype[Symbol.primitive] = function(hint){
+//     console.log(hint)
+//         if(hint=='number'){
+//             return this.nums.reduce((accum, val)=>accum+val, 0)
+//         }
+//         else if(hint=='string'){
+//             return `[${this.nums}]`
+//         }
+//         else 
+//             return this.nums.reduce((accum, val)=>accum+val, 0)
+// }
 /**
  * @return {number}
  */
