@@ -4,49 +4,20 @@
  */
 var ArrayWrapper = function(nums) {
         this.nums = nums
-    //    [Symbol.toPrimitive](hint){
-    //     if(hint=='number'){
-    //         return this.nums.reduce((accum, val)=>accum+val, 0)
-    //     }
-    //     else if(hint=='string'){
-    //         return `[${this.nums}]`
-    //     }
-    //     else 
-    //         return this.nums
-    // }
 };
 
-// ArrayWrapper.prototype[Symbol.primitive] = function(hint){
-//     console.log(hint)
-//         if(hint=='number'){
-//             return this.nums.reduce((accum, val)=>accum+val, 0)
-//         }
-//         else if(hint=='string'){
-//             return `[${this.nums}]`
-//         }
-//         else 
-//             return this.nums.reduce((accum, val)=>accum+val, 0)
-// }
 /**
  * @return {number}
  */
 ArrayWrapper.prototype.valueOf = function() {
-    // [Symbol.toPrimitive](hint){
-    //     if(hint=='number'){
             return this.nums.reduce((accum, val)=>accum+val, 0)
-        // }
-    // }
 }
 
 /**
  * @return {string}
  */
 ArrayWrapper.prototype.toString = function() {
-    // [Symbol.toPrimitive](hint){
-    //     if(hint=='string'){
             return `[${this.nums}]`
-        // }
-    // }
 }
 
 /**
