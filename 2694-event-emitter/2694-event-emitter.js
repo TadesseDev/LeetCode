@@ -13,7 +13,6 @@ class EventEmitter {
         }
         else
             this.subscriptions[eventName] = [callback]
-        // console.log(this.subscriptions)
         return {
             unsubscribe: () => {
                 this.subscriptions[eventName][index] = null
