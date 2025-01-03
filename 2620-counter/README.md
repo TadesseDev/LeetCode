@@ -1,11 +1,12 @@
-<h2><a href="https://leetcode.com/problems/counter/">2620. Counter</a></h2><h3>Easy</h3><hr><div><p>Given an integer&nbsp;<code>n</code>,&nbsp;return a <code>counter</code> function. This <code>counter</code> function initially returns&nbsp;<code>n</code>&nbsp;and then returns 1 more than the previous value every subsequent time it is called (<code>n</code>, <code>n + 1</code>, <code>n + 2</code>, etc).</p>
+<h2><a href="https://leetcode.com/problems/counter">2620. Counter</a></h2><h3>Easy</h3><hr><p>Given an integer&nbsp;<code>n</code>,&nbsp;return a <code>counter</code> function. This <code>counter</code> function initially returns&nbsp;<code>n</code>&nbsp;and then returns 1 more than the previous value every subsequent time it is called (<code>n</code>, <code>n + 1</code>, <code>n + 2</code>, etc).</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> 
+<pre>
+<strong>Input:</strong> 
 n = 10 
-["call","call","call"]
+[&quot;call&quot;,&quot;call&quot;,&quot;call&quot;]
 <strong>Output:</strong> [10,11,12]
 <strong>Explanation: 
 </strong>counter() = 10 // The first time counter() is called, it returns n.
@@ -15,9 +16,10 @@ counter() = 12 // Returns 1 more than the previous time.
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> 
+<pre>
+<strong>Input:</strong> 
 n = -2
-["call","call","call","call","call"]
+[&quot;call&quot;,&quot;call&quot;,&quot;call&quot;,&quot;call&quot;,&quot;call&quot;]
 <strong>Output:</strong> [-2,-1,0,1,2]
 <strong>Explanation:</strong> counter() initially returns -2. Then increases after each sebsequent call.
 </pre>
@@ -27,6 +29,6 @@ n = -2
 
 <ul>
 	<li><code>-1000<sup>&nbsp;</sup>&lt;= n &lt;= 1000</code></li>
-	<li><code>At most 1000 calls to counter() will be made</code></li>
+	<li><code>0 &lt;= calls.length &lt;= 1000</code></li>
+	<li><code>calls[i] === &quot;call&quot;</code></li>
 </ul>
-</div>
