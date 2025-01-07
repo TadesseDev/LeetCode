@@ -2,7 +2,6 @@ type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string
 
 function argumentsLength(...args: JSONValue[]): number {
     return args.length
-    
 };
 
 /**
