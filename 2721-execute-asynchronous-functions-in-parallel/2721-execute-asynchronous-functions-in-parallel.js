@@ -6,15 +6,15 @@ var promiseAll = function(functions) {
     return new Promise((res, rej)=>{
         const results = []
         let count=functions.length
-        for(let i=0;i<functions.length; i++){
-            functions[i]().then((val)=>{
+        functions.forEach((fun, i)=>{
+            fun().then((val)=>{
                 results[i]=val
                 count--;
                 if(count == 0){
                     res(results)
                 }
             }).catch(err=>rej(err))
-        }
+        });
     });
 };
 
