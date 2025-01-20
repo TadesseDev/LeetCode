@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/execute-asynchronous-functions-in-parallel/">2721. Execute Asynchronous Functions in Parallel</a></h2><h3>Medium</h3><hr><div><p>Given an array of&nbsp;asynchronous functions&nbsp;<code>functions</code>, return a new promise <code>promise</code>. Each function in the array accepts no arguments&nbsp;and returns a promise. All the promises should be executed in parallel.</p>
+<h2><a href="https://leetcode.com/problems/execute-asynchronous-functions-in-parallel/?envType=study-plan-v2&envId=30-days-of-javascript">2721. Execute Asynchronous Functions in Parallel</a></h2><h3>Medium</h3><hr><p>Given an array of&nbsp;asynchronous functions&nbsp;<code>functions</code>, return a new promise <code>promise</code>. Each function in the array accepts no arguments&nbsp;and returns a promise. All the promises should be executed in parallel.</p>
 
 <p><code>promise</code> resolves:</p>
 
@@ -17,10 +17,11 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> functions = [
+<pre>
+<strong>Input:</strong> functions = [
 &nbsp; () =&gt; new Promise(resolve =&gt; setTimeout(() =&gt; resolve(5), 200))
 ]
-<strong>Output:</strong> {"t": 200, "resolved": [5]}
+<strong>Output:</strong> {&quot;t&quot;: 200, &quot;resolved&quot;: [5]}
 <strong>Explanation:</strong> 
 promiseAll(functions).then(console.log); // [5]
 
@@ -29,22 +30,24 @@ The single function was resolved at 200ms with a value of 5.
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> functions = [
+<pre>
+<strong>Input:</strong> functions = [
     () =&gt; new Promise(resolve =&gt; setTimeout(() =&gt; resolve(1), 200)), 
-    () =&gt; new Promise((resolve, reject) =&gt; setTimeout(() =&gt; reject("Error"), 100))
+    () =&gt; new Promise((resolve, reject) =&gt; setTimeout(() =&gt; reject(&quot;Error&quot;), 100))
 ]
-<strong>Output:</strong> {"t": 100, "rejected": "Error"}
+<strong>Output:</strong> {&quot;t&quot;: 100, &quot;rejected&quot;: &quot;Error&quot;}
 <strong>Explanation:</strong> Since one of the promises rejected, the returned promise also rejected with the same error at the same time.
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
 
-<pre><strong>Input:</strong> functions = [
+<pre>
+<strong>Input:</strong> functions = [
     () =&gt; new Promise(resolve =&gt; setTimeout(() =&gt; resolve(4), 50)), 
     () =&gt; new Promise(resolve =&gt; setTimeout(() =&gt; resolve(10), 150)), 
     () =&gt; new Promise(resolve =&gt; setTimeout(() =&gt; resolve(16), 100))
 ]
-<strong>Output:</strong> {"t": 150, "resolved": [4, 10, 16]}
+<strong>Output:</strong> {&quot;t&quot;: 150, &quot;resolved&quot;: [4, 10, 16]}
 <strong>Explanation:</strong> All the promises resolved with a value. The returned promise resolved when the last promise resolved.
 </pre>
 
@@ -55,4 +58,3 @@ The single function was resolved at 200ms with a value of 5.
 	<li><code>functions</code>&nbsp;is an array of functions that returns promises</li>
 	<li><code>1 &lt;= functions.length &lt;= 10</code></li>
 </ul>
-</div>
