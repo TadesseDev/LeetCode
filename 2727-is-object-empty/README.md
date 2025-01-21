@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/is-object-empty/">2727. Is Object Empty</a></h2><h3>Easy</h3><hr><div><p>Given an object or an array, return if it is empty.</p>
+<h2><a href="https://leetcode.com/problems/is-object-empty/?envType=study-plan-v2&envId=30-days-of-javascript">2727. Is Object Empty</a></h2><h3>Easy</h3><hr><p>Given an object or an array, return if it is empty.</p>
 
 <ul>
 	<li>An empty object contains no key-value pairs.</li>
@@ -10,21 +10,24 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> obj = {"x": 5, "y": 42}
+<pre>
+<strong>Input:</strong> obj = {&quot;x&quot;: 5, &quot;y&quot;: 42}
 <strong>Output:</strong> false
 <strong>Explanation:</strong> The object has 2 key-value pairs so it is not empty.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> obj = {}
+<pre>
+<strong>Input:</strong> obj = {}
 <strong>Output:</strong> true
-<strong>Explanation:</strong> The object doesn't have any key-value pairs so it is empty.
+<strong>Explanation:</strong> The object doesn&#39;t have any key-value pairs so it is empty.
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
 
-<pre><strong>Input:</strong> obj = [null, false, 0]
+<pre>
+<strong>Input:</strong> obj = [null, false, 0]
 <strong>Output:</strong> false
 <strong>Explanation:</strong> The array has 3 elements so it is not empty.
 </pre>
@@ -38,4 +41,4 @@
 </ul>
 
 <p>&nbsp;</p>
-<strong>Can you solve it in O(1) time?</strong></div>
+<strong>Can you solve it in O(1) time?</strong>
