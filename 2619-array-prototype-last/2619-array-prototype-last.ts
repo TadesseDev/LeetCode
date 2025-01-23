@@ -3,7 +3,9 @@ interface Array<T> {
 }
 
 Array.prototype.last = function() {
-    return this[this.length-1] || -1
+    if(this.length)
+        return this[this.length-1] 
+    return -1
 };
 
 /**
