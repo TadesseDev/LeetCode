@@ -1,61 +1,25 @@
-function multiply(num1: string, num2: string): string {
-    const store = []
-    let rem = 0
-    let res = ''
-    for(let i=num2.length-1; i>=0; i--){
-        let curr = +num2[i]
-        let res = []
-        for(let j=num1.length-1; j>=0; j--){
-            let product = curr*+num1[j] + rem
-            if(product>9){
-            rem = Math.floor(product/10)
-            let val = product%10
-            res.unshift(val)
-            }else{
-                res.unshift(product)
-                rem=0
-            }
-        }
-            if(rem){
-                res.unshift(rem)
-                rem=0 
-                }
-        store.push(res)
+function multiply(num1, num2) {
+  if (num1 === "0" || num2 === "0") return "0";
+
+  const m = num1.length, n = num2.length;
+  const result = Array(m + n).fill(0);
+
+  // Multiply each digit
+  for (let i = m - 1; i >= 0; i--) {
+    for (let j = n - 1; j >= 0; j--) {
+      const mul = (+num1[i]) * (+num2[j]);
+      const p1 = i + j, p2 = i + j + 1;
+
+      const sum = mul + result[p2];
+      result[p2] = sum % 10;
+      result[p1] += Math.floor(sum / 10);
     }
+    console.log(result)
+  }
 
-    let iter = 1;
-    const accum = []
-    rem = 0
-    while(store.length){
-        let i=0;
-        let sum = rem
-        while(i<iter && i<store.length){
-            const last = store[i].pop()
-            sum += last
-            if(!store[i].length){
-                store.splice(i,1)
-                iter--
-                i--
-            }
-            i++
-        }
-        if(sum>9){
-            rem = Math.floor(sum/10)
-            let val = sum%10
-            accum.unshift(val)
-        }else{
-            accum.unshift(sum)
-            rem=0
-        }
+  // Skip leading zeros
+  let i = 0;
+  while (i < result.length && result[i] === 0) i++;
 
-        iter++
-    }
-    if(rem)
-    accum.unshift(rem)
-    let leadingZeros=0
-    while(leadingZeros<accum.length-1 && accum[leadingZeros]==0)
-    leadingZeros++
-accum.splice(0,leadingZeros)
-    return accum.join("")
-
-};
+  return result.slice(i).join('');
+}
