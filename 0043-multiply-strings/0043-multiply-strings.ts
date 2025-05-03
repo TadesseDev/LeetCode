@@ -34,7 +34,6 @@ function multiply(num1: string, num2: string): string {
         let curr = +num2[i]
         let res = []
         for(let j=num1.length-1; j>=0; j--){
-            // console.log(curr, rem, num1[j])
             let product = curr*+num1[j] + rem
             if(product>9){
             rem = Math.floor(product/10)
@@ -49,31 +48,8 @@ function multiply(num1: string, num2: string): string {
                 res.unshift(rem)
                 rem=0 
                 }
-            // console.log('after ', curr, ":", res)
         store.push(res, ...new Array(zeros).fill(0))
     }
-    // console.log('store is: ',store)
-    // 123
-    // 456
-    // [ [ 7, 3, 8 ], [ 6, 1, 5 ], [ 4, 9, 2 ] ]
-    // for(let i=store[0].length; i>=0; i--){
-    //     let sum=rem
-    //     for(let j=0; j<store.length; j++){
-    //         sum+=store[j][i] || 0
-    //     }
-    //     console.log(sum)
-    //     if(sum==0)
-    //         continue
-    //     else if(sum>9){
-    //         rem = Math.floor(sum/10)
-    //         let val = sum%10
-    //         res = String(val) + res
-    //         console.log(val, rem, res)
-    //     }else{
-    //             res = String(sum) + res
-    //             rem=0
-    //     }
-    // }
 
     let iter = 1;
     const accum = []
