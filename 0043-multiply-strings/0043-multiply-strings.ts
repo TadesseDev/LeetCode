@@ -1,35 +1,7 @@
 function multiply(num1: string, num2: string): string {
-    /*
-    - prepare a store array
-    - start result as ''
-    - iterate through num1
-        - find the current number 
-        - rem = 0
-        - res = []
-        - iterate thogu num2
-            - rem = ?
-            - value = ?
-            - update result
-        - store.push res
-    - iterate through store
-        - push 0 with its number of index for the current arra
-    - initialize rem as 0
-        rem = 0
-    - iterate through store and calculate the result 
-         - sum = rem
-        - iterate through the internal array 
-            - sum the element at `i` for each array
-        - calculate 
-            - res = ''
-            - rem = 0
-    return res
-        
-    */
     const store = []
-    const zeros = 0 
     let rem = 0
     let res = ''
-    let maxLen = 0
     for(let i=num2.length-1; i>=0; i--){
         let curr = +num2[i]
         let res = []
@@ -48,7 +20,7 @@ function multiply(num1: string, num2: string): string {
                 res.unshift(rem)
                 rem=0 
                 }
-        store.push(res, ...new Array(zeros).fill(0))
+        store.push(res)
     }
 
     let iter = 1;
@@ -75,7 +47,7 @@ function multiply(num1: string, num2: string): string {
             accum.unshift(sum)
             rem=0
         }
-        // console.log('after :', i , "is ", accum, store)
+
         iter++
     }
     if(rem)
