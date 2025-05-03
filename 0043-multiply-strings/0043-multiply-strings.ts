@@ -14,7 +14,7 @@ function multiply(num1, num2) {
       result[p2] = sum % 10;
       result[p1] += Math.floor(sum / 10);
     }
-    console.log(result)
+    // console.log(result)
   }
 
   // Skip leading zeros
