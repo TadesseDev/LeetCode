@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/array-wrapper/">2695. Array Wrapper</a></h2><h3>Easy</h3><hr><div><p>Create a class&nbsp;<code>ArrayWrapper</code> that accepts&nbsp;an array of integers in its constructor. This class should have two features:</p>
+<h2><a href="https://leetcode.com/problems/array-wrapper/">2695. Array Wrapper</a></h2><h3>Easy</h3><hr><p>Create a class&nbsp;<code>ArrayWrapper</code> that accepts&nbsp;an array of integers in its constructor. This class should have two features:</p>
 
 <ul>
 	<li>When two instances of this class are added together with the&nbsp;<code>+</code>&nbsp;operator, the resulting value is the sum of all the elements in&nbsp;both arrays.</li>
@@ -8,7 +8,8 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> nums = [[1,2],[3,4]], operation = "Add"
+<pre>
+<strong>Input:</strong> nums = [[1,2],[3,4]], operation = &quot;Add&quot;
 <strong>Output:</strong> 10
 <strong>Explanation:</strong>
 const obj1 = new ArrayWrapper([1,2]);
@@ -18,16 +19,18 @@ obj1 + obj2; // 10
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> nums = [[23,98,42,70]], operation = "String"
-<strong>Output:</strong> "[23,98,42,70]"
+<pre>
+<strong>Input:</strong> nums = [[23,98,42,70]], operation = &quot;String&quot;
+<strong>Output:</strong> &quot;[23,98,42,70]&quot;
 <strong>Explanation:</strong>
 const obj = new ArrayWrapper([23,98,42,70]);
-String(obj); // "[23,98,42,70]"
+String(obj); // &quot;[23,98,42,70]&quot;
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
 
-<pre><strong>Input:</strong> nums = [[],[]], operation = "Add"
+<pre>
+<strong>Input:</strong> nums = [[],[]], operation = &quot;Add&quot;
 <strong>Output:</strong> 0
 <strong>Explanation:</strong>
 const obj1 = new ArrayWrapper([]);
@@ -43,4 +46,3 @@ obj1 + obj2; // 0
 	<li><code>0 &lt;= nums[i]&nbsp;&lt;= 1000</code></li>
 	<li><code>Note: nums is the array passed to the constructor</code></li>
 </ul>
-</div>
