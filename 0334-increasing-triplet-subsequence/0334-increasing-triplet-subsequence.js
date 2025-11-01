@@ -29,7 +29,8 @@ var increasingTriplet = function(nums) {
 // ele = 2
     let results=[nums[0]]
 
-    for(let ele of nums){
+    for(let i=0;i<nums.length;i++){
+        let ele = nums[i]
         let len = results.length
         if(ele>results[len-1]){
             if(len==1)
