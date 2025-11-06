@@ -10,17 +10,9 @@ var findMaxAverage = function(nums, k) {
     }
     let maxSum=sum
     for(let i=k;i<nums.length;i++){
-    //    console.log(i,k,sum,nums[i])
-    
-        if(nums[i-k]<nums[i]){
-            sum=0
-            for(let j=(i-k)+1;j<=i;j++){
-                sum+=nums[j]
-            }
-            console.log(i-k+1,k,sum,maxSum)
-            if(sum>maxSum)
-            maxSum = sum;
-        }
+        sum=(sum-nums[i-k]) + nums[i]
+        if(sum>maxSum)
+            maxSum=sum
     }
     
     return maxSum/k
