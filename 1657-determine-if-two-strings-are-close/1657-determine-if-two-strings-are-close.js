@@ -26,6 +26,8 @@ var closeStrings = function(word1, word2) {
     }
 const val1 = Array.from(hash1.values()).sort((a,b)=>a-b)
 const val2 = Array.from(hash2.values()).sort((a,b)=>a-b)
+const key1 = Array.from(hash1.keys()).sort((a,b)=>a-b)
+const key2 = Array.from(hash2.keys()).sort((a,b)=>a-b)
 console.log(hash1, hash2)
 console.log(val1, val2)
 i=0
@@ -33,7 +35,7 @@ i=0
         let frequence1 = val1[i];
         let frequence2 = val2[i];
         console.log(frequence1,frequence2)
-        if(frequence1!=frequence2)
+        if(frequence1!=frequence2 || !hash1.has(key2[i]) || !hash2.has(key1[i]))
         return false
         i++
     }while(i<val1.length);
