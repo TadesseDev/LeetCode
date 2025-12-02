@@ -19,23 +19,37 @@ var pairSum = function(head) {
 * update max sum an unshift the element from the array
 * finally return max
 */
-let max = 0;
- function conpairTwins(current, index){
-    if(!current.next)
-        return [current]
-    const res = conpairTwins(current.next, index+1);
+// let max = 0;
+//  function conpairTwins(current, index){
+//     if(!current.next)
+//         return [current]
+//     const res = conpairTwins(current.next, index+1);
     
-    if(res.length-1==index){
-        const twin=res.shift()
-        if(twin.val+current.val > max)
-            max=twin.val+current.val
-    }
-    else {
-        res.unshift(current)
-    }
-    return res;
- }
+//     if(res.length-1==index){
+//         const twin=res.shift()
+//         if(twin.val+current.val > max)
+//             max=twin.val+current.val
+//     }
+//     else {
+//         res.unshift(current)
+//     }
+//     return res;
+//  }
 
- conpairTwins(head, 0)
- return max
+//  conpairTwins(head, 0)
+//  return max
+
+const arr=[];
+let temp=head;
+let max=0;
+while(temp){
+    arr.push(temp)
+    temp=temp.next
+}
+
+for(let i=arr.length/2-1,j=arr.length/2;i>=0&&j<arr.length;j++,i--){
+    if(arr[j].val+arr[i].val>max)
+    max=arr[j].val+arr[i].val;
+}
+return max;
 };
