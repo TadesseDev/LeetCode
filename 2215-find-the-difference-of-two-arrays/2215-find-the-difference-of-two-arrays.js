@@ -11,11 +11,11 @@ var findDifference = function(nums1, nums2) {
     Array.from(hash1.keys()).forEach(val=>{
         if(hash2.has(val)){
             hash2.set(val, false)
-            hash1.set(val, false)
+            hash1.delete(val)
         }
     });
 
-    const aswer1 = Array.from(hash1.entries()).filter(item=>item[1]).map(item=>item[0])
+    const aswer1 = Array.from(hash1.entries()).map(item=>item[0])
     const aswer2 = Array.from(hash2.entries()).filter(item=>item[1]).map(item=>item[0])
 
     return [aswer1, aswer2]
