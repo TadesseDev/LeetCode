@@ -5,18 +5,26 @@
  */
 var findDifference = function(nums1, nums2) {
     
-    const hash1 = new Map(nums1.map(val=>[val, true]));
-    const hash2 = new Map(nums2.map(val=>[val, true]));
+    const hash = new Map([...nums1.map(val=>[val, 1])]);
+    // const hash2 = new Map(nums2.map(val=>[val, true]));
 
-    Array.from(hash1.keys()).forEach(val=>{
-        if(hash2.has(val)){
-            hash2.set(val, false)
-            hash1.delete(val)
+    nums2.forEach(val=>{
+        if(hash.has(val) && hash.get(val)!=2){
+            hash.set(val, 3)
+        }else{
+            hash.set(val, 2)
         }
     });
 
-    const aswer1 = Array.from(hash1.entries()).map(item=>item[0])
-    const aswer2 = Array.from(hash2.entries()).filter(item=>item[1]).map(item=>item[0])
+    // const aswer1 = Array.from(hash1.entries()).map(item=>item[0])
+    // const aswer2 = Array.from(hash2.entries()).filter(item=>item[1]).map(item=>item[0])
 
-    return [aswer1, aswer2]
+    // return [aswer1, aswer2]
+    return Array.from(hash.entries()).reduce((store, value)=>{
+        if(value[1]==1)
+        store[0].push(value[0])
+        else if(value[1]==2)
+        store[1].push(value[0])
+        return store
+    },[[],[]])
 };
