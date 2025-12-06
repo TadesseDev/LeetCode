@@ -18,8 +18,8 @@ var maxDepth = function(root) {
     */
     if(!root)
         return 0
-    let right = maxDepth(root.right) + 1;
-    let left = maxDepth(root.left) + 1;
+    let right = root.right ? maxDepth(root.right) + 1: 1;
+    let left = root.left ? maxDepth(root.left) + 1 : 1;
 
     return left > right ? left : right ;
 };
