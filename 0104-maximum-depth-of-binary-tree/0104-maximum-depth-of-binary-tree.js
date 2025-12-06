@@ -21,7 +21,6 @@ var maxDepth = function(root) {
     let right = maxDepth(root.right) + 1;
     let left = maxDepth(root.left) + 1;
 
-    console.log(root?.val, left, right)
     return left > right ? left : right ;
 };
 /*
