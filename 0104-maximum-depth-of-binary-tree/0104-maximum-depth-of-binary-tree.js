@@ -11,9 +11,27 @@
  * @return {number}
  */
 var maxDepth = function(root) {
+    /*
+    - get the depth from left and + 1
+    - get the depth from right and + 1
+    - return max of the two 
+    */
     if(!root)
         return 0
-   let lc=maxDepth(root.left)+1
-   let rc=maxDepth(root.right)+1
-   return lc>rc ? lc:rc
+    let right = maxDepth(root.right) + 1;
+    let left = maxDepth(root.left) + 1;
+
+    console.log(root?.val, left, right)
+    return left > right ? left : right ;
 };
+/*
+3 1 1
+5 1 1
+5 1 2
+6 1 1
+9 1 2
+15 1 1
+7 1 1
+20 1 2
+3 1 3
+*/
