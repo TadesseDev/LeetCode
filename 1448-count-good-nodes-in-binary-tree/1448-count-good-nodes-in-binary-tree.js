@@ -11,17 +11,28 @@
  * @return {number}
  */
 var goodNodes = function(root) {
-    let count=0
-    function countGoodNodes(node, max){
-        if(!node)
-            return 
-        if(node.val>=max){
-            count+=1
+    /*
+    - set good node as []
+    - call recursive functionwith root, and max=root.val-1
+    - recursively 
+        - if node.val>=passed max val
+            add node to good nodes
             max=node.val
+        - iterate to left and right.
+    return max
+    */
+
+    let good=0;
+    function findGoodOnes(node, max){
+        if(!node)
+            return;
+        if(node.val>=max){
+            good++;
+            max=node.val;
         }
-        countGoodNodes(node.left, max)
-        countGoodNodes(node.right, max)
+        findGoodOnes(node.right, max)
+        findGoodOnes(node.left, max)
     }
-    countGoodNodes(root, root.val-1)
-    return count
+    findGoodOnes(root, root.val-1)
+    return good;
 };
