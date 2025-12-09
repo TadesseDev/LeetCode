@@ -35,7 +35,6 @@ let result=null;
 
         let P = left=='P' || right == "P" || node.val == p.val ? "P" : null;
         let Q = left=='Q' || right == "Q" || node.val == q.val ? "Q" :null;
-        // console.log(P,Q,result, p, q)
 
         if(P&&Q)
             result=node
