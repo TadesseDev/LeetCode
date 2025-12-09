@@ -33,6 +33,8 @@ let result=null;
         let left=findCLA(node.left)
         let right=findCLA(node.right)
 
+if(result)
+return
         let P = left=='P' || right == "P" || node.val == p.val ? "P" : null;
         let Q = left=='Q' || right == "Q" || node.val == q.val ? "Q" :null;
 
