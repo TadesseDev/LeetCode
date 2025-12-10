@@ -11,22 +11,29 @@
  * @return {number[]}
  */
 var rightSideView = function(root) {
-    let result=[]
-    if(!root)
-        return result
-    function findRSV(nodes){
-        if(!nodes.length)
-            return 
-        result.push(nodes[nodes.length-1].val)
-        let next=[]
-        nodes.forEach(node=>{
-            if(node.left)
-                next.push(node.left)
-            if(node.right)
-                next.push(node.right)
-        })
-        findRSV(next)
+    /*
+    - start quee[root]
+    - result []
+    - while quee.length>0
+        result.push(quue last element);
+        - temp =[];
+        - while(quee.length)
+            node = quee.shift()
+            push left and right of the node to temp
+        quee = temp
+    */
+
+    let quee = root ? [root] : [];
+    let result = [];
+    while(quee.length){
+        result.push(quee[quee.length-1].val)
+        let temp = []
+        while(quee.length){
+            let node=quee.shift()
+            node.left && temp.push(node.left)
+            node.right && temp.push(node.right)
+        }
+    quee=temp;
     }
-    findRSV([root])
     return result;
 };
