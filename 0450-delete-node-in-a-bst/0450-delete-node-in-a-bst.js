@@ -40,10 +40,10 @@ var deleteNode = function(root, key) {
         }
         else if(node.right?.val==val){
             const temp = node.right.left; // null
-            node.right=node.right.right // 
+            node.right=node.right.right // null
             return insertPhase(node.right || node, temp)
         }
-        return deletePhase(node.left, val) ?? deletePhase(node.right, val)
+        return val < node.val ? deletePhase(node.left, val) : deletePhase(node.right, val)
     }
 
     function insertPhase(parent, chiled){ // 4, 2 
