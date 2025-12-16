@@ -52,7 +52,7 @@ var findCircleNum = function(isConnected) {
      for(let i=0; i<isConnected.length; i++){
         for(let j=0; j<isConnected.length; j++){
             if(isConnected[i][j]==1){
-                console.log([i,j])
+                // console.log([i,j])
                 count++;
                 markProvinces(i, j, Symbol())
             }
