@@ -48,3 +48,11 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 LICENCED UNDER [MIT License](LICENSE)
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Database
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1378-replace-employee-id-with-the-unique-identifier](https://github.com/TadesseDev/LeetCode/tree/main/1378-replace-employee-id-with-the-unique-identifier/) | Easy |
+<!---LeetCode Topics End-->
