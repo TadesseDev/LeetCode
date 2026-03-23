@@ -55,4 +55,16 @@ LICENCED UNDER [MIT License](LICENSE)
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1378-replace-employee-id-with-the-unique-identifier](https://github.com/TadesseDev/LeetCode/tree/main/1378-replace-employee-id-with-the-unique-identifier/) | Easy |
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0088-merge-sorted-array](https://github.com/TadesseDev/LeetCode/tree/main/0088-merge-sorted-array/) | Easy |
+## Two Pointers
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0088-merge-sorted-array](https://github.com/TadesseDev/LeetCode/tree/main/0088-merge-sorted-array/) | Easy |
+## Sorting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0088-merge-sorted-array](https://github.com/TadesseDev/LeetCode/tree/main/0088-merge-sorted-array/) | Easy |
 <!---LeetCode Topics End-->
