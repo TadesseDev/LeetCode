@@ -16,9 +16,8 @@ function removeElement(nums: number[], val: number): number {
 
         // console.log(nums, i, j)
     }
-    if(i>j)
-    i--;
+
 
     
-    return nums[i]==val ? i : ++i;
+    return nums[j]==val ? i : ++j;
 };
