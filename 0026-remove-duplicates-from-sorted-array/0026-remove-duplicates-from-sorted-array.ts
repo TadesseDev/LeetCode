@@ -1,7 +1,6 @@
 function removeDuplicates(nums: number[]): number {
     
-    let i=1, length=nums.length;
-    // [1,2,2,]
+    let i=1
 
     while(i<nums.length){
         if(nums[i] == nums[i-1]){
@@ -10,9 +9,7 @@ function removeDuplicates(nums: number[]): number {
             while(ind < nums.length && nums[ind] == nums[i]){
                 ind++;
             }
-            let eleToRemove = ind-i;
-            let newElements = nums.splice(i, eleToRemove)
-            // length -=eleToRemove;
+            nums.splice(i, ind-i)
         }
         i++;
     }
