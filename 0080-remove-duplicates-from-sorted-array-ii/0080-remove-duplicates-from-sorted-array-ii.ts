@@ -12,8 +12,6 @@ function removeDuplicates(nums: number[]): number {
             }
             i++;
         }
-        // if(i==nums.length && nums[i-1]==nums[i-3])
-        //  nums.splice(i-1, 1)
         return nums.length;
     
 };
