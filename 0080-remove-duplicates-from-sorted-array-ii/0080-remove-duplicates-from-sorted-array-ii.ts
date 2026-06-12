@@ -5,7 +5,7 @@ function removeDuplicates(nums: number[]): number {
 
             if(nums[i]==nums[i-2]){
                 let k=i+1;
-                while(k<nums.length && nums[k]==nums[i])
+                while(nums[k]==nums[i])
                     k++;
                 nums.splice(i, k-i)
                 i++
