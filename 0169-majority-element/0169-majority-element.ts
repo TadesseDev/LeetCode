@@ -1,17 +1,17 @@
 function majorityElement(nums: number[]): number {
-     nums.sort((a,b)=>a-b);
-    const majority = Math.floor(nums.length/2);
-    let i=0;
-    while(i<nums.length){
+    //  nums.sort((a,b)=>a-b);
+    // const majority = Math.floor(nums.length/2);
+        let i=0;
         let count=0;
-        let start = nums[i];
-        while(i<nums.length && nums[i]==start){
+        let candidate = nums[i];
+        while(i<nums.length){
+            if(count==0)
+                candidate = nums[i];
+            count+= candidate == nums[i] ? 1 : -1;
             i++;
-            count++;
         }
 
-        if(count>majority)
-            return start;
-    }
-    return undefined;
+        // if(count>majority)
+            return candidate;
+
 };
