@@ -64,6 +64,7 @@ LICENCED UNDER [MIT License](LICENSE)
 | [0088-merge-sorted-array](https://github.com/TadesseDev/LeetCode/tree/main/0088-merge-sorted-array/) | Easy |
 | [0169-majority-element](https://github.com/TadesseDev/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/TadesseDev/LeetCode/tree/main/0189-rotate-array/) | Medium |
+| [0283-move-zeroes](https://github.com/TadesseDev/LeetCode/tree/main/0283-move-zeroes/) | Easy |
 | [0896-monotonic-array](https://github.com/TadesseDev/LeetCode/tree/main/0896-monotonic-array/) | Easy |
 ## Two Pointers
 | Problem Name | Difficulty |
@@ -74,6 +75,7 @@ LICENCED UNDER [MIT License](LICENSE)
 | [0088-merge-sorted-array](https://github.com/TadesseDev/LeetCode/tree/main/0088-merge-sorted-array/) | Easy |
 | [0125-valid-palindrome](https://github.com/TadesseDev/LeetCode/tree/main/0125-valid-palindrome/) | Easy |
 | [0189-rotate-array](https://github.com/TadesseDev/LeetCode/tree/main/0189-rotate-array/) | Medium |
+| [0283-move-zeroes](https://github.com/TadesseDev/LeetCode/tree/main/0283-move-zeroes/) | Easy |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
