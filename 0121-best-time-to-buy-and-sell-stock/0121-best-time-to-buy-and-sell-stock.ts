@@ -17,7 +17,7 @@ let right=1
     while(right<prices.length){
         if(profit<(prices[right]-prices[left]))
             profit = prices[right]-prices[left];
-        if(prices[right]<prices[left])
+        else if(prices[right]<prices[left])
             left=right;
         right++
     }
