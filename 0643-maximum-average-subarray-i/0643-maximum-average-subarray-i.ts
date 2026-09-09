@@ -7,7 +7,6 @@ function findMaxAverage(nums: number[], k: number): number {
         j++
     }
     
-    console.log(sum)
     let result=sum;
 
     while(j<nums.length){
