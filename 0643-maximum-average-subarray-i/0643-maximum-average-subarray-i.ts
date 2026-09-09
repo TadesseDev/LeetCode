@@ -18,6 +18,5 @@ function findMaxAverage(nums: number[], k: number): number {
             result = sum
         j++;
     }
-    console.log(result)
     return result/k
 };
