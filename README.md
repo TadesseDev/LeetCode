@@ -66,6 +66,7 @@ LICENCED UNDER [MIT License](LICENSE)
 | [0169-majority-element](https://github.com/TadesseDev/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/TadesseDev/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0283-move-zeroes](https://github.com/TadesseDev/LeetCode/tree/main/0283-move-zeroes/) | Easy |
+| [0643-maximum-average-subarray-i](https://github.com/TadesseDev/LeetCode/tree/main/0643-maximum-average-subarray-i/) | Easy |
 | [0896-monotonic-array](https://github.com/TadesseDev/LeetCode/tree/main/0896-monotonic-array/) | Easy |
 ## Two Pointers
 | Problem Name | Difficulty |
@@ -116,4 +117,8 @@ LICENCED UNDER [MIT License](LICENSE)
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0141-linked-list-cycle](https://github.com/TadesseDev/LeetCode/tree/main/0141-linked-list-cycle/) | Easy |
+## Sliding Window
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0643-maximum-average-subarray-i](https://github.com/TadesseDev/LeetCode/tree/main/0643-maximum-average-subarray-i/) | Easy |
 <!---LeetCode Topics End-->
