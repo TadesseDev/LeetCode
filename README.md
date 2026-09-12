@@ -77,6 +77,7 @@ LICENCED UNDER [MIT License](LICENSE)
 | [0088-merge-sorted-array](https://github.com/TadesseDev/LeetCode/tree/main/0088-merge-sorted-array/) | Easy |
 | [0125-valid-palindrome](https://github.com/TadesseDev/LeetCode/tree/main/0125-valid-palindrome/) | Easy |
 | [0141-linked-list-cycle](https://github.com/TadesseDev/LeetCode/tree/main/0141-linked-list-cycle/) | Easy |
+| [0160-intersection-of-two-linked-lists](https://github.com/TadesseDev/LeetCode/tree/main/0160-intersection-of-two-linked-lists/) | Easy |
 | [0189-rotate-array](https://github.com/TadesseDev/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0283-move-zeroes](https://github.com/TadesseDev/LeetCode/tree/main/0283-move-zeroes/) | Easy |
 ## Sorting
@@ -88,6 +89,7 @@ LICENCED UNDER [MIT License](LICENSE)
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0141-linked-list-cycle](https://github.com/TadesseDev/LeetCode/tree/main/0141-linked-list-cycle/) | Easy |
+| [0160-intersection-of-two-linked-lists](https://github.com/TadesseDev/LeetCode/tree/main/0160-intersection-of-two-linked-lists/) | Easy |
 | [0169-majority-element](https://github.com/TadesseDev/LeetCode/tree/main/0169-majority-element/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
@@ -113,6 +115,7 @@ LICENCED UNDER [MIT License](LICENSE)
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0141-linked-list-cycle](https://github.com/TadesseDev/LeetCode/tree/main/0141-linked-list-cycle/) | Easy |
+| [0160-intersection-of-two-linked-lists](https://github.com/TadesseDev/LeetCode/tree/main/0160-intersection-of-two-linked-lists/) | Easy |
 ## Floyd's Cycle Finding Algorithm
 | Problem Name | Difficulty |
 | ------- | ------- |
