@@ -80,6 +80,7 @@ LICENCED UNDER [MIT License](LICENSE)
 | [0160-intersection-of-two-linked-lists](https://github.com/TadesseDev/LeetCode/tree/main/0160-intersection-of-two-linked-lists/) | Easy |
 | [0189-rotate-array](https://github.com/TadesseDev/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0283-move-zeroes](https://github.com/TadesseDev/LeetCode/tree/main/0283-move-zeroes/) | Easy |
+| [0345-reverse-vowels-of-a-string](https://github.com/TadesseDev/LeetCode/tree/main/0345-reverse-vowels-of-a-string/) | Easy |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -107,6 +108,7 @@ LICENCED UNDER [MIT License](LICENSE)
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0125-valid-palindrome](https://github.com/TadesseDev/LeetCode/tree/main/0125-valid-palindrome/) | Easy |
+| [0345-reverse-vowels-of-a-string](https://github.com/TadesseDev/LeetCode/tree/main/0345-reverse-vowels-of-a-string/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
