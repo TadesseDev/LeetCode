@@ -10,6 +10,5 @@ function sortedSquares(nums: number[]): number[] {
             j--
         }
     }
-    // console.log(num, result)
     return result.reverse();
 };
