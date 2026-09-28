@@ -13,10 +13,12 @@ function threeSumClosest(nums: number[], target: number): number {
             }
             if(target-closerSum == 0)
                 return sum
-            if(target-sum>0)
+            if(target-sum>0){
                 l++
-            else 
+            }
+            else {
                 r--
+            }
         }
     }
     return closerSum
